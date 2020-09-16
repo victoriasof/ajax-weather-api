@@ -3,16 +3,14 @@
 
 document.getElementById("search").addEventListener("click", ()=>{
 
-    var mykey = config.MY_KEY;
-    var key2 = config.KEY_2;
-
-    let apiKeyUrl =`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=` + mykey
-    let keyUnsplash = `https://api.unsplash.com/photos/random?query=${city}&client_id=` + key2
-
+    let mykey = config.MY_KEY;
+    let key2 = config.KEY_2;
 
     let city= document.getElementById("input").value;
 
-
+    let apiKeyUrl =`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=` + mykey
+    let keyUnsplash = `https://api.unsplash.com/photos/random?query=${city}&client_id=` + key2
+    
     fetch(apiKeyUrl)
         .then(response => response.json())
         .then(data => showData(data))
