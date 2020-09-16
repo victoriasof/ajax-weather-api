@@ -1,0 +1,6 @@
+var config = {
+  MY_KEY : '8fb9457f203009590ef435a9f37072b6',
+  SECRET_KEY : 'vBC-xYaH2vnsluHDQGxrUTXYOUtgzoBQvsee9eSXDy8',
+  KEY_2 : 'So61IiiIyjV1LZs7oCUzjSKdKmKAYHt8O93pE88X9E0'
+}
+
