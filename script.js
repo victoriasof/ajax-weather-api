@@ -41,17 +41,17 @@ function showData(forecast){
     document.getElementById("desc2").innerHTML = forecast.list[15].weather[0].description;
 
     document.getElementById("date3").innerHTML = forecast.list[23].dt_txt;
-    document.getElementById("img3").src = `http://openweathermap.org/img/wn/${forecast.list[23].weather[0].icon}@2x.png`
+    document.getElementById("img3").src = `http://openweathermap.org/img/wn/${forecast.list[23].weather[0].icon}@2x.png`;
     document.getElementById("temp3").innerHTML = forecast.list[23].main.temp + " °C";
     document.getElementById("desc3").innerHTML = forecast.list[23].weather[0].description;
 
     document.getElementById("date4").innerHTML = forecast.list[31].dt_txt;
-    document.getElementById("img4").src = `http://openweathermap.org/img/wn/${forecast.list[31].weather[0].icon}@2x.png`
+    document.getElementById("img4").src = `http://openweathermap.org/img/wn/${forecast.list[31].weather[0].icon}@2x.png`;
     document.getElementById("temp4").innerHTML = forecast.list[31].main.temp + " °C"
     document.getElementById("desc4").innerHTML = forecast.list[31].weather[0].description;
 
     document.getElementById("date5").innerHTML = forecast.list[39].dt_txt;
-    document.getElementById("img5").src = `http://openweathermap.org/img/wn/${forecast.list[39].weather[0].icon}@2x.png`
+    document.getElementById("img5").src = `http://openweathermap.org/img/wn/${forecast.list[39].weather[0].icon}@2x.png`;
     document.getElementById("temp5").innerHTML = forecast.list[39].main.temp + " °C";
     document.getElementById("desc5").innerHTML = forecast.list[39].weather[0].description;
 
