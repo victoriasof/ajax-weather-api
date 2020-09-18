@@ -45,11 +45,11 @@ function showTemp (average) {
 
     console.log(average);
 
-    document.getElementById("temp1").innerHTML = Math.round((average.daily[1].temp.min + average.daily[1].temp.max)/2) + " °C";
-    document.getElementById("temp2").innerHTML = Math.round((average.daily[2].temp.min + average.daily[2].temp.max)/2) + " °C";
-    document.getElementById("temp3").innerHTML = Math.round((average.daily[3].temp.min + average.daily[3].temp.max)/2) + " °C";
-    document.getElementById("temp4").innerHTML = Math.round((average.daily[4].temp.min + average.daily[4].temp.max)/2) + " °C";
-    document.getElementById("temp5").innerHTML = Math.round((average.daily[5].temp.min + average.daily[5].temp.max)/2) + " °C";
+    document.getElementById("temp1").innerHTML = Math.round((average.daily[1].temp.morn + average.daily[1].temp.day + average.daily[1].temp.eve + average.daily[1].temp.night)/4) + " °C";
+    document.getElementById("temp2").innerHTML = Math.round((average.daily[2].temp.morn + average.daily[2].temp.day + average.daily[2].temp.eve + average.daily[1].temp.night)/4) + " °C";
+    document.getElementById("temp3").innerHTML = Math.round((average.daily[3].temp.morn + average.daily[3].temp.day + average.daily[3].temp.eve + average.daily[1].temp.night)/4) + " °C";
+    document.getElementById("temp4").innerHTML = Math.round((average.daily[4].temp.morn + average.daily[4].temp.day + average.daily[4].temp.eve + average.daily[1].temp.night)/4) + " °C";
+    document.getElementById("temp5").innerHTML = Math.round((average.daily[5].temp.morn + average.daily[5].temp.day + average.daily[5].temp.eve + average.daily[1].temp.night)/4) + " °C";
 
 }
 
