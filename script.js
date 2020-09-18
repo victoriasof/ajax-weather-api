@@ -17,16 +17,17 @@ document.getElementById("search").addEventListener("click", ()=>{
             let latitude = data.city.coord.lat;
             let longitude = data.city.coord.lon;
 
-            let onecallKey = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&units=metric&appid` + mykey
+            console.log(mykey)
+            let onecallKey = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&units=metric&appid=` + mykey
 
             fetch(onecallKey)
                 .then(response => response.json())
-                .then(data => showTemp(data))
+                .then(temp => showTemp(temp))
                 .catch(err => console.error(err));
 
             showData(data)
 
-            showTemp(data)
+            //showTemp(data)
 
         })
 
@@ -41,9 +42,11 @@ document.getElementById("search").addEventListener("click", ()=>{
 
 function showTemp (average) {
 
-    document.getElementById("temp1").innerHTML = (average.daily[0].temp.min + average.daily[0].temp.max)/2 + " °C";
-    document.getElementById("temp2").innerHTML = (average.daily[1].temp.min + average.daily[1].temp.max)/2 + " °C";
-    document.getElementById("temp3").innerHTML = (average.daily[2].temp.min + average.daily[2].temp.max)/2 + " °C";
+    console.log(average);
+
+    document.getElementById("temp1").innerHTML = (average.daily[1].temp.min + average.daily[0].temp.max)/2 + " °C";
+    document.getElementById("temp2").innerHTML = (average.daily[2].temp.min + average.daily[1].temp.max)/2 + " °C";
+    document.getElementById("temp3").innerHTML = (average.daily[3].temp.min + average.daily[2].temp.max)/2 + " °C";
     document.getElementById("temp4").innerHTML = (average.daily[4].temp.min + average.daily[4].temp.max)/2 + " °C";
     document.getElementById("temp5").innerHTML = (average.daily[5].temp.min + average.daily[5].temp.max)/2 + " °C";
 
