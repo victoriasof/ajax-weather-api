@@ -8,7 +8,6 @@ document.getElementById("search").addEventListener("click", ()=>{
     let key2 = config.KEY_2;
 
     let apiKeyUrl =`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=` + mykey
-
     let keyUnsplash = `https://api.unsplash.com/photos/random?query=${city}&client_id=` + key2
 
     fetch(apiKeyUrl)
@@ -18,7 +17,7 @@ document.getElementById("search").addEventListener("click", ()=>{
             let latitude = data.city.coord.lat;
             let longitude = data.city.coord.lon;
 
-            let onecallKey = `http://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&units=metric&appid` + mykey
+            let onecallKey = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&units=metric&appid` + mykey
 
             fetch(onecallKey)
                 .then(response => response.json())
@@ -26,9 +25,11 @@ document.getElementById("search").addEventListener("click", ()=>{
                 .catch(err => console.error(err));
 
             showData(data)
+
             showTemp(data)
-            
+
         })
+
         .catch(err => console.error(err));
 
     fetch(keyUnsplash)
@@ -40,11 +41,11 @@ document.getElementById("search").addEventListener("click", ()=>{
 
 function showTemp (average) {
 
-    document.getElementById("temp1").innerHTML = average.daily[0].temp.day + " °C";
-    document.getElementById("temp2").innerHTML = average.daily[1].temp.day + " °C";
-    document.getElementById("temp3").innerHTML = average.daily[2].temp.day + " °C";
-    document.getElementById("temp4").innerHTML = average.daily[4].temp.day + " °C"
-    document.getElementById("temp5").innerHTML = average.daily[5].temp.day + " °C";
+    document.getElementById("temp1").innerHTML = (average.daily[0].temp.min + average.daily[0].temp.max)/2 + " °C";
+    document.getElementById("temp2").innerHTML = (average.daily[1].temp.min + average.daily[1].temp.max)/2 + " °C";
+    document.getElementById("temp3").innerHTML = (average.daily[2].temp.min + average.daily[2].temp.max)/2 + " °C";
+    document.getElementById("temp4").innerHTML = (average.daily[4].temp.min + average.daily[4].temp.max)/2 + " °C";
+    document.getElementById("temp5").innerHTML = (average.daily[5].temp.min + average.daily[5].temp.max)/2 + " °C";
 
 }
 
@@ -56,27 +57,27 @@ function showImage(image){
 function showData(forecast){
 
     document.getElementById("date1").innerHTML = forecast.list[7].dt_txt;
-    document.getElementById("img1").src = `http://openweathermap.org/img/wn/${forecast.list[7].weather[0].icon}@2x.png`;
+    document.getElementById("img1").src = `https://openweathermap.org/img/wn/${forecast.list[7].weather[0].icon}@2x.png`;
     //document.getElementById("temp1").innerHTML = forecast.list[7].main.temp + " °C";
     document.getElementById("desc1").innerHTML = forecast.list[7].weather[0].description;
 
     document.getElementById("date2").innerHTML = forecast.list[15].dt_txt;
-    document.getElementById("img2").src = `http://openweathermap.org/img/wn/${forecast.list[15].weather[0].icon}@2x.png`;
+    document.getElementById("img2").src = `https://openweathermap.org/img/wn/${forecast.list[15].weather[0].icon}@2x.png`;
     //document.getElementById("temp2").innerHTML = forecast.list[15].main.temp + " °C";
     document.getElementById("desc2").innerHTML = forecast.list[15].weather[0].description;
 
     document.getElementById("date3").innerHTML = forecast.list[23].dt_txt;
-    document.getElementById("img3").src = `http://openweathermap.org/img/wn/${forecast.list[23].weather[0].icon}@2x.png`;
+    document.getElementById("img3").src = `https://openweathermap.org/img/wn/${forecast.list[23].weather[0].icon}@2x.png`;
     //document.getElementById("temp3").innerHTML = forecast.list[23].main.temp + " °C";
     document.getElementById("desc3").innerHTML = forecast.list[23].weather[0].description;
 
     document.getElementById("date4").innerHTML = forecast.list[31].dt_txt;
-    document.getElementById("img4").src = `http://openweathermap.org/img/wn/${forecast.list[31].weather[0].icon}@2x.png`;
+    document.getElementById("img4").src = `https://openweathermap.org/img/wn/${forecast.list[31].weather[0].icon}@2x.png`;
     //document.getElementById("temp4").innerHTML = forecast.list[31].main.temp + " °C"
     document.getElementById("desc4").innerHTML = forecast.list[31].weather[0].description;
 
     document.getElementById("date5").innerHTML = forecast.list[39].dt_txt;
-    document.getElementById("img5").src = `http://openweathermap.org/img/wn/${forecast.list[39].weather[0].icon}@2x.png`;
+    document.getElementById("img5").src = `https://openweathermap.org/img/wn/${forecast.list[39].weather[0].icon}@2x.png`;
     //document.getElementById("temp5").innerHTML = forecast.list[39].main.temp + " °C";
     document.getElementById("desc5").innerHTML = forecast.list[39].weather[0].description;
 
