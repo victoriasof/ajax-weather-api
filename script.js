@@ -75,6 +75,22 @@ function showData(forecast){
     let day4 = new Date(forecast.list[31].dt_txt);
     let day5 = new Date(forecast.list[39].dt_txt);
 
+    /*
+    let now = new Date();
+    let time = now.getHours();
+
+    for (i=0; i <= 24; i++){
+        if (time < 3){block[4]}
+        else if (time <=3 && time > 6){block[3]}
+        else if (time <=6 && time > 9){block[2]}
+        else if (time <=9 && time > 12 ){block[1]}
+        else if (time <=12 && time > 15 ){block[0]}
+        else if (time <=15 && time > 18){block[8]}
+        else if (time <=18 && time > 21){block[7]}
+        else if (time <=21 && time > 24){block[6]}
+    }
+    */
+
     document.getElementById("date1").innerHTML = weekday[day1.getDay()];
     document.getElementById("img1").src = `https://openweathermap.org/img/wn/${forecast.list[7].weather[0].icon}@2x.png`;
     //document.getElementById("temp1").innerHTML = forecast.list[7].main.temp + " °C";
