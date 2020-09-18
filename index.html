@@ -21,27 +21,29 @@ Display the weather for the next 5 days. Show the averages per day.
 -->
 
 
-<div class="container bg-info ">
+<div class="container bg-info mt-2">
 
     <div class="row">
 
-        <div class="col-sm p-3 d-inline-block">
-            <div class="input-field pt-2 text-center">
-                <input id="input" type="text" name="city" placeholder="City">
-                <button id="search" type="button"  class="btn btn-danger">Search</button>
+        <div class="col-sm p-3 d-inline-block my-auto">
+
+            <div class="row pt-2 my-auto ">
+                <div class="text-white pt-3 pl-5">
+                    <h2>Weather App</h2>
+                    <p>Weather forecast for the next 5 days</p>
+                </div>
             </div>
+
+            <div class="row p-3 my-auto">
+                <div class="input-field pt-2 pl-4">
+                    <input id="input" type="text" name="city" placeholder="City">
+                    <button id="search" type="button"  class="btn btn-danger">Search</button>
+                </div>
+            </div>
+
         </div>
 
-        <div class="col-sm pt-2 d-inline-block">
-            <div class="text-white pt-3 text-center">
-                <h2>Weather App</h2>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="row">
-        <div class="col-sm p-3 d-inline-block">
+        <div class="col-sm p-3 d-inline-block my-auto">
             <div class="card">
                 <div class="card-body center-block">
                     <img src="" id="cityImg" class="img-responsive center-block d-block mx-auto " alt="City">
@@ -50,8 +52,12 @@ Display the weather for the next 5 days. Show the averages per day.
                 </div>
             </div>
         </div>
+
     </div>
 
+    <div class="row my-auto">
+
+    </div>
 
     <div class="row">
 
@@ -59,8 +65,8 @@ Display the weather for the next 5 days. Show the averages per day.
             <div class="card">
                 <div class="card-body">
                     <p id="date1">day</p>
-                    <img id="img1" src="" class="img-responsive center-block d-block mx-auto" alt="">
                     <h5 id="temp1" class="card-title text-center text-dark">Temperature</h5>
+                    <img id="img1" src="" class="img-responsive center-block d-block mx-auto" alt="">
                     <p id="desc1" class="card-text text-center text-dark">description</p>
 
                 </div>
@@ -71,8 +77,8 @@ Display the weather for the next 5 days. Show the averages per day.
             <div class="card">
                 <div class="card-body">
                     <p id="date2">day</p>
-                    <img id="img2" src="" class="img-responsive center-block d-block mx-auto" alt="">
                     <h5 id="temp2" class="card-title text-center text-dark ">Temperature</h5>
+                    <img id="img2" src="" class="img-responsive center-block d-block mx-auto" alt="">
                     <p id="desc2" class="card-text text-center text-dark ">description</p>
                 </div>
             </div>
@@ -82,8 +88,8 @@ Display the weather for the next 5 days. Show the averages per day.
             <div class="card">
                 <div class="card-body">
                     <p id="date3">day</p>
-                    <img id="img3" src="" class="img-responsive center-block d-block mx-auto" alt="">
                     <h5 id="temp3" class="card-title text-center text-dark"> Temperature</h5>
+                    <img id="img3" src="" class="img-responsive center-block d-block mx-auto" alt="">
                     <p id="desc3" class="card-text text-center text-dark">description</p>
                 </div>
             </div>
@@ -94,8 +100,8 @@ Display the weather for the next 5 days. Show the averages per day.
             <div class="card">
                 <div class="card-body">
                     <p id="date4">day</p>
-                    <img id="img4" src="" class="img-responsive center-block d-block mx-auto" alt="">
                     <h5 id="temp4" class="card-title text-center text-dark ">Temperature</h5>
+                    <img id="img4" src="" class="img-responsive center-block d-block mx-auto" alt="">
                     <p id="desc4" class="card-text text-center text-dark">description</p>
                 </div>
             </div>
@@ -105,8 +111,8 @@ Display the weather for the next 5 days. Show the averages per day.
             <div class="card">
                 <div class="card-body">
                     <p id="date5">day</p>
-                    <img id="img5" src="" class="img-responsive center-block d-block mx-auto" alt="">
                     <h5 id="temp5" class="card-title text-center text-dark ">Weather</h5>
+                    <img id="img5" src="" class="img-responsive center-block d-block mx-auto" alt="">
                     <p id="desc5" class="card-text text-center text-dark">description</p>
                 </div>
             </div>
