@@ -80,14 +80,15 @@ function showData(forecast){
     let time = now.getHours();
 
     for (i=0; i <= 24; i++){
-        if (time < 3){block[4]}
-        else if (time <=3 && time > 6){block[3]}
-        else if (time <=6 && time > 9){block[2]}
+         if (time <=12 && time > 15 ){block[0]}
         else if (time <=9 && time > 12 ){block[1]}
-        else if (time <=12 && time > 15 ){block[0]}
-        else if (time <=15 && time > 18){block[8]}
-        else if (time <=18 && time > 21){block[7]}
-        else if (time <=21 && time > 24){block[6]}
+        else if (time <=6 && time > 9){block[2]}
+        else if (time <=3 && time > 6){block[3]}
+        else if (time <=0 && time > 3){block[4]}
+        else if (time <=21 && time > 24){block[5]}
+        else if (time <=18 && time > 21){block[6]}
+        else if (time <=15 && time > 18){block[7]}
+       
     }
     */
 
